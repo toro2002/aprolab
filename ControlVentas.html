@@ -1,0 +1,1014 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/CVentas.css">
+    <link rel="shortcut icon" href="img/69601130_508940209682252_4217431282197463040_n.jpg" type="image/x-icon">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://kit.fontawesome.com/bf208e9523.js" crossorigin="anonymous"></script>
+    <!-- Bootstrap-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous" />
+    <!-- DataTable -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.12.1/css/dataTables.bootstrap5.min.css" />
+
+
+    <title>AproTila-System</title>
+</head>
+
+
+<div class="openSide">
+    <i class="bx bx-menu" id="menu"></i>
+</div>
+
+<div id="sidebar" class="sidebar close">
+
+    <div class="logo-details">
+        <img src="/img/69601130_508940209682252_4217431282197463040_n.jpg" alt="" style="width: 60px;">
+        <span class="logo_name" style='color:#080808'>AproTila</span>
+    </div>
+    <ul class="nav-links" id="nav-links">
+
+        <!-- <li>
+            <a href="#">
+                <i class='bx bx-grid-alt'></i>
+                <span class="link_name">Inventario</span>
+            </a>
+            <ul class="sub-menu blank">
+                <li><a class="link_name" href="#">Inventario</a></li>
+            </ul>
+        </li> -->
+        <li>
+            <div class="iocn-link">
+                <a href="ModuloInvetario.html">
+                    <i class='bx bx-grid-alt'></i>
+                    <span class="link_name">Inventario</span>
+                </a>
+            </div>
+            <ul class="sub-menu">
+                <li><a class="link_name" href="ModuloInvetario.html">Inventario</a></li>
+
+
+            </ul>
+        </li>
+        <li>
+            <div class="iocn-link">
+                <a href="ModuloVentas.html">
+                    <i id="this" class="fa-solid fa-money-check-dollar"></i>
+                    <span class="link_name">Modulo Ventas</span>
+                </a>
+            </div>
+            <ul class="sub-menu blank">
+                <li><a class="link_name" href="ModuloVentas.html">Ventas</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="ModuloPilas.html">
+                <i class="fa-solid fa-water"></i>
+                <span class="link_name">Modulo Pilas</span>
+            </a>
+            <ul class="sub-menu blank">
+                <li><a class="link_name" href="ModuloPilas.html">Pilas</a></li>
+            </ul>
+        </li>
+        <li>
+            <div class="iocn-link">
+                <a href="#">
+                    <i class="fa-solid fa-fish"></i>
+                    <span class="link_name">Control Peces</span>
+                </a>
+                <i class='bx bxs-chevron-down arrow'></i>
+            </div>
+            <ul class="sub-menu">
+                <li><a class="link_name" href="#">Control Peces</a></li>
+                <li><a href="ModuloAlimentacion.html">Alimentación</a></li>
+                <li><a href="ModuloMortabilidad.html">Mortabilidad</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="ModuloIngreso.html">
+                <i class="fa-solid fa-whiskey-glass"></i>
+                <span class="link_name">Modulo Ingreso</span>
+            </a>
+            <ul class="sub-menu blank">
+                <li><a class="link_name" href="ModuloIngreso.html">Modulo Ingreso</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="ModuloAlevines.html">
+                <i class="fa-solid fa-fish-fins"></i>
+                <span class="link_name">Ingreso Alevines</span>
+            </a>
+            <ul class="sub-menu blank">
+                <li><a class="link_name" href="ModuloAlevines.html">Alevines</a></li>
+            </ul>
+        </li>
+
+        <li>
+            <a href="ModuloTrazabilidad.html">
+                <i class='bx bx-cog'></i>
+                <span class="link_name">Trazabilidad</span>
+            </a>
+            <ul class="sub-menu blank">
+                <li><a class="link_name" href="ModuloTrazabilidad.html">Trazabilidad</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="ModuloMuestreo.html">
+                <i class="fa-solid fa-eye"></i>
+                <span class="link_name">Muestreo</span>
+            </a>
+            <ul class="sub-menu blank">
+                <li><a class="link_name" href="ModuloMuestreo.html">Muestreo</a></li>
+            </ul>
+        </li>
+        <li>
+            <div class="profile-details">
+                <div class="profile-content">
+                    <img src="img/photo-1610088441520-4352457e7095.jfif" alt="profileImg">
+                </div>
+                <div class="name-job">
+                    <div class="profile_name">Encargado</div>
+                    <div class="job">Trabajador</div>
+                </div>
+                <i class='bx bx-log-out' style="color: aliceblue;"></i>
+            </div>
+        </li>
+    </ul>
+
+</div>
+<section class="home-section" id="main">
+
+    <div class="home-content">
+
+
+
+
+        <div class="container ventas" id="divVentas">
+            <h1 id="title">Modulo Ventas</h1>
+            <div class="crud">
+                <button class="download-button" value="Export to Excel"
+                    onclick="tableToExcel('table_venta', 'Datos Ventas')">
+                    <div class="docs"><svg class="css-i6dzq1" stroke-linejoin="round" stroke-linecap="round" fill="none"
+                            stroke-width="2" stroke="currentColor" height="20" width="20" viewBox="0 0 24 24">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                            <polyline points="14 2 14 8 20 8"></polyline>
+                            <line y2="13" x2="8" y1="13" x1="16"></line>
+                            <line y2="17" x2="8" y1="17" x1="16"></line>
+                            <polyline points="10 9 9 9 8 9"></polyline>
+                        </svg>Excel</div>
+                    <div class="download">
+                        <svg class="css-i6dzq1" stroke-linejoin="round" stroke-linecap="round" fill="none"
+                            stroke-width="2" stroke="currentColor" height="24" width="24" viewBox="0 0 24 24">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                            <polyline points="7 10 12 15 17 10"></polyline>
+                            <line y2="3" x2="12" y1="15" x1="12"></line>
+                        </svg>
+                    </div>
+                </button>
+                <div class="icons-BD">
+                    <i class="fa-solid fa-circle-plus" id="add"></i>
+                </div>
+
+            </div>
+            <div class="table_wratter">
+                <table class="table" id="table_venta">
+
+
+
+                    <thead>
+                        <tr>
+                            <th class="last">Encargado</th>
+                            <th class="last">Fecha</th>
+                            <th>Pila</th>
+                            <th>Peso</th>
+                            <th>Tilapia</th>
+                            <th>Total</th>
+                            <th class="last">Cliente</th>
+                            <th class="last">Numero</th>
+                            <th class="last">Tipo de Pago</th>
+                            <th>Acción</th>
+                        </tr>
+                    </thead>
+                    <div id="cloud_load" class="cloud_load"><span class="loader"></span></div>
+                    <tbody id="registers">
+
+
+                    </tbody>
+
+                </table>
+            </div>
+        </div>
+
+        <div class="container concentrado" id="divConcentrado">
+            <h1 id="title">Modulo Ingresos</h1>
+            <div class="crud">
+                <button class="download-button" value="Export to Excel"
+                    onclick="tableToExcel('table_concentrado', 'Datos Concentrado')">
+                    <div class="docs"><svg class="css-i6dzq1" stroke-linejoin="round" stroke-linecap="round" fill="none"
+                            stroke-width="2" stroke="currentColor" height="20" width="20" viewBox="0 0 24 24">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                            <polyline points="14 2 14 8 20 8"></polyline>
+                            <line y2="13" x2="8" y1="13" x1="16"></line>
+                            <line y2="17" x2="8" y1="17" x1="16"></line>
+                            <polyline points="10 9 9 9 8 9"></polyline>
+                        </svg>Excel</div>
+                    <div class="download">
+                        <svg class="css-i6dzq1" stroke-linejoin="round" stroke-linecap="round" fill="none"
+                            stroke-width="2" stroke="currentColor" height="24" width="24" viewBox="0 0 24 24">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                            <polyline points="7 10 12 15 17 10"></polyline>
+                            <line y2="3" x2="12" y1="15" x1="12"></line>
+                        </svg>
+                    </div>
+                </button>
+                <div class="icons-BD">
+                    <i class="fa-solid fa-circle-plus" id="add_Concentrado"></i>
+                </div>
+
+            </div>
+            <table class="table" id="table_concentrado">
+
+                <thead>
+                    <tr>
+                        <th>Tipo</th>
+                        <th>Marca</th>
+                        <th class="last">Fecha de Compra</th>
+                        <th class="last">Fecha de Vencimiento</th>
+                        <th>Proveedor</th>
+                        <th>Precio</th>
+                        <th>Cantidad</th>
+                        <th>Cantidad de Proteína</th>
+                        <th>Acción</th>
+                    </tr>
+                </thead>
+                <div id="cloud_load" class="cloud_load"><span class="loader"></span></div>
+                <tbody id="Rconcentrado">
+
+
+                </tbody>
+
+            </table>
+
+        </div>
+        <div class="container alimentacion" id="divAlimentacion">
+            <h1 id="title">Alimentación</h1>
+            <div class="crud">
+                <button class="download-button" value="Export to Excel"
+                    onclick="tableToExcel('table_alimentacion', 'Datos Alimentación')">
+                    <div class="docs"><svg class="css-i6dzq1" stroke-linejoin="round" stroke-linecap="round" fill="none"
+                            stroke-width="2" stroke="currentColor" height="20" width="20" viewBox="0 0 24 24">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                            <polyline points="14 2 14 8 20 8"></polyline>
+                            <line y2="13" x2="8" y1="13" x1="16"></line>
+                            <line y2="17" x2="8" y1="17" x1="16"></line>
+                            <polyline points="10 9 9 9 8 9"></polyline>
+                        </svg>Excel</div>
+                    <div class="download">
+                        <svg class="css-i6dzq1" stroke-linejoin="round" stroke-linecap="round" fill="none"
+                            stroke-width="2" stroke="currentColor" height="24" width="24" viewBox="0 0 24 24">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                            <polyline points="7 10 12 15 17 10"></polyline>
+                            <line y2="3" x2="12" y1="15" x1="12"></line>
+                        </svg>
+                    </div>
+                </button>
+                <div class="icons-BD">
+                    <i class="fa-solid fa-circle-plus" id="add_alimento"></i>
+
+                </div>
+
+            </div>
+            <div class="table_wratter">
+                <table class="table" id="table_alimentacion">
+
+
+
+                    <thead>
+                        <tr>
+                            <th>Encargado</th>
+                            <th>Fecha</th>
+                            <th>Tipo Concentrado</th>
+                            <th>Pila</th>
+                            <th>Total Kilos</th>
+                            <th>Acción</th>
+                        </tr>
+                    </thead>
+                    <div id="cloud_load" class="cloud_load"><span class="loader"></span></div>
+                    <tbody id="RAlimentacion">
+
+
+                    </tbody>
+
+                </table>
+            </div>
+        </div>
+
+        <div class="container pilas" id="divPila">
+            <h1 id="title">Modulo Pilas</h1>
+            <div class="crud">
+                <button class="download-button" value="Export to Excel" onclick="tableToExcel('table_Pila', 'Pilas')">
+                    <div class="docs"><svg class="css-i6dzq1" stroke-linejoin="round" stroke-linecap="round" fill="none"
+                            stroke-width="2" stroke="currentColor" height="20" width="20" viewBox="0 0 24 24">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                            <polyline points="14 2 14 8 20 8"></polyline>
+                            <line y2="13" x2="8" y1="13" x1="16"></line>
+                            <line y2="17" x2="8" y1="17" x1="16"></line>
+                            <polyline points="10 9 9 9 8 9"></polyline>
+                        </svg>Excel</div>
+                    <div class="download">
+                        <svg class="css-i6dzq1" stroke-linejoin="round" stroke-linecap="round" fill="none"
+                            stroke-width="2" stroke="currentColor" height="24" width="24" viewBox="0 0 24 24">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                            <polyline points="7 10 12 15 17 10"></polyline>
+                            <line y2="3" x2="12" y1="15" x1="12"></line>
+                        </svg>
+                    </div>
+                </button>
+                <div class="icons-BD">
+                    <i class="fa-solid fa-circle-plus" id="add"></i>
+
+                </div>
+            </div>
+            <div class="table_wratter">
+                <table class="table" id="table_Pila">
+                    <thead>
+                        <tr>
+                            <th>Id Pila</th>
+                            <th>Nombre Pila</th>
+                        </tr>
+                    </thead>
+                    <div id="cloud_load" class="cloud_load"><span class="loader"></span></div>
+                    <tbody id="RPila">
+
+
+                    </tbody>
+
+                </table>
+            </div>
+
+
+        </div>
+
+        <div class="container mortabilidad" id="divMortabilidad">
+            <h1 id="title">Modulo Mortabilidad</h1>
+            <div class="crud">
+                <button class="download-button" value="Export to Excel"
+                    onclick="tableToExcel('table_Mortabilidad', 'Datos Mortabilidad')">
+                    <div class="docs"><svg class="css-i6dzq1" stroke-linejoin="round" stroke-linecap="round" fill="none"
+                            stroke-width="2" stroke="currentColor" height="20" width="20" viewBox="0 0 24 24">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                            <polyline points="14 2 14 8 20 8"></polyline>
+                            <line y2="13" x2="8" y1="13" x1="16"></line>
+                            <line y2="17" x2="8" y1="17" x1="16"></line>
+                            <polyline points="10 9 9 9 8 9"></polyline>
+                        </svg>Excel</div>
+                    <div class="download">
+                        <svg class="css-i6dzq1" stroke-linejoin="round" stroke-linecap="round" fill="none"
+                            stroke-width="2" stroke="currentColor" height="24" width="24" viewBox="0 0 24 24">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                            <polyline points="7 10 12 15 17 10"></polyline>
+                            <line y2="3" x2="12" y1="15" x1="12"></line>
+                        </svg>
+                    </div>
+                </button>
+                <div class="icons-BD">
+                    <i class="fa-solid fa-circle-plus" id="add_Mortabilidad"></i>
+
+                </div>
+            </div>
+            <div class="table_wratter">
+                <table class="table" id="table_Mortabilidad">
+                    <thead>
+                        <tr>
+                            <th>Pila</th>
+                            <th>Cantidad</th>
+                            <th>Encargado</th>
+                            <th>Observaciones</th>
+                            <th>Acciones</th>
+
+                        </tr>
+                    </thead>
+                    <div id="cloud_load" class="cloud_load"><span class="loader"></span></div>
+                    <tbody id="RMortabilidad">
+
+
+                    </tbody>
+
+                </table>
+            </div>
+
+
+        </div>
+        <div class="container alevines" id="divAlevines">
+            <h1 id="title">Ingreso Alevines</h1>
+            <div class="crud">
+                <button class="download-button" value="Export to Excel"
+                    onclick="tableToExcel('table_Alevines', 'Alevines')">
+                    <div class="docs"><svg class="css-i6dzq1" stroke-linejoin="round" stroke-linecap="round" fill="none"
+                            stroke-width="2" stroke="currentColor" height="20" width="20" viewBox="0 0 24 24">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                            <polyline points="14 2 14 8 20 8"></polyline>
+                            <line y2="13" x2="8" y1="13" x1="16"></line>
+                            <line y2="17" x2="8" y1="17" x1="16"></line>
+                            <polyline points="10 9 9 9 8 9"></polyline>
+                        </svg>Excel</div>
+                    <div class="download">
+                        <svg class="css-i6dzq1" stroke-linejoin="round" stroke-linecap="round" fill="none"
+                            stroke-width="2" stroke="currentColor" height="24" width="24" viewBox="0 0 24 24">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                            <polyline points="7 10 12 15 17 10"></polyline>
+                            <line y2="3" x2="12" y1="15" x1="12"></line>
+                        </svg>
+                    </div>
+                </button>
+                <div class="icons-BD">
+                    <i class="fa-solid fa-circle-plus" id="add_Alevines"></i>
+
+                </div>
+            </div>
+            <div class="table_wratter">
+                <table class="table" id="table_Alevines">
+                    <thead>
+                        <tr>
+                            <th>Proveedor</th>
+                            <th>Lote Proveedor</th>
+                            <th>Pila Proveedor</th>
+                            <th>Lote Aprotila</th>
+                            <th>Pila Aprotila</th>
+                            <th>Encargado</th>
+                            <th>Especie</th>
+                            <th>Cantidad</th>
+                            <th class="last">Fecha</th>
+                            <th>Acción</th>
+                        </tr>
+                    </thead>
+                    <div id="cloud_load" class="cloud_load"><span class="loader"></span></div>
+                    <tbody id="RAlevines">
+
+
+                    </tbody>
+
+                </table>
+            </div>
+
+
+        </div>
+
+        <div class="container inveconcentrado" id="divinveConcentrado">
+            <h1 id="title">Inventario</h1>
+            <div class="crud">
+                <button class="download-button" value="Export to Excel"
+                    onclick="tableToExcel('table_inveconcentrado', 'Inventario Concentrado')">
+                    <div class="docs"><svg class="css-i6dzq1" stroke-linejoin="round" stroke-linecap="round" fill="none"
+                            stroke-width="2" stroke="currentColor" height="20" width="20" viewBox="0 0 24 24">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                            <polyline points="14 2 14 8 20 8"></polyline>
+                            <line y2="13" x2="8" y1="13" x1="16"></line>
+                            <line y2="17" x2="8" y1="17" x1="16"></line>
+                            <polyline points="10 9 9 9 8 9"></polyline>
+                        </svg>Excel</div>
+                    <div class="download">
+                        <svg class="css-i6dzq1" stroke-linejoin="round" stroke-linecap="round" fill="none"
+                            stroke-width="2" stroke="currentColor" height="24" width="24" viewBox="0 0 24 24">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                            <polyline points="7 10 12 15 17 10"></polyline>
+                            <line y2="3" x2="12" y1="15" x1="12"></line>
+                        </svg>
+                    </div>
+                </button>
+                <div class="icons-BD">
+                    <i class="fa-solid fa-circle-plus" id="add_inveConcentrado"></i>
+                </div>
+
+            </div>
+            <table class="table" id="table_inveconcentrado">
+
+                <thead>
+                    <tr>
+                        <th>Tipo Concentrado</th>
+                        <th>Kilos Disponibles</th>
+                        <th>Ultimo Ingreso</th>
+                    </tr>
+                </thead>
+                <div id="cloud_load" class="cloud_load"><span class="loader"></span></div>
+                <tbody id="Rinveconcentrado">
+
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+
+        <div class="container trazabilidad" id="divTrazabilidad">
+            <h1 id="title">Trazabilidad</h1>
+            <div class="crud">
+
+                <button class="download-button" value="Export to Excel"
+                    onclick="tableToExcel('table_trazabilidad', 'Trazabilidad')">
+                    <div class="docs"><svg class="css-i6dzq1" stroke-linejoin="round" stroke-linecap="round" fill="none"
+                            stroke-width="2" stroke="currentColor" height="20" width="20" viewBox="0 0 24 24">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                            <polyline points="14 2 14 8 20 8"></polyline>
+                            <line y2="13" x2="8" y1="13" x1="16"></line>
+                            <line y2="17" x2="8" y1="17" x1="16"></line>
+                            <polyline points="10 9 9 9 8 9"></polyline>
+                        </svg>Excel</div>
+                    <div class="download">
+                        <svg class="css-i6dzq1" stroke-linejoin="round" stroke-linecap="round" fill="none"
+                            stroke-width="2" stroke="currentColor" height="24" width="24" viewBox="0 0 24 24">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                            <polyline points="7 10 12 15 17 10"></polyline>
+                            <line y2="3" x2="12" y1="15" x1="12"></line>
+                        </svg>
+                    </div>
+                </button>
+                <div class="icons-BD">
+                    <i class="fa-solid fa-circle-plus" id="add_trazabilidad"></i>
+                </div>
+
+            </div>
+            <table class="table" id="table_trazabilidad">
+
+                <thead>
+                    <tr>
+                        <th>Lote</th>
+                        <th>Pila</th>
+                        <th>Tipo Pez</th>
+                        <th>Cantidad</th>
+                        <th>Fecha</th>
+                        <th>Acción</th>
+                    </tr>
+                </thead>
+                <div id="cloud_load" class="cloud_load"><span class="loader"></span></div>
+                <tbody id="Rtrazabilidad">
+
+
+                </tbody>
+
+            </table>
+            <div class="boton-modal">
+                <label for="btn-modal" onclick="mostrarTras()">
+                    Ver Trazabilidad
+                </label>
+            </div>
+            <!--Fin de Boton-->
+            <!--Ventana Modal-->
+            <input type="checkbox" id="btn-modal">
+            <div class="container-modal">
+                <div class="content-modal" id="modalTrazabilidad">
+
+                    <div class="btn-cerrar">
+                        <label for="btn-modal">Cerrar</label>
+                    </div>
+                </div>
+                <label for="btn-modal" class="cerrar-modal"></label>
+            </div>
+        </div>
+
+        <div class="container muestreo" id="divMuestreo">
+            <h1 id="title">Muestreo</h1>
+            <div class="crud">
+                <button class="download-button" value="Export to Excel"
+                    onclick="tableToExcel('table_muestreo', 'Muestreo')">
+                    <div class="docs"><svg class="css-i6dzq1" stroke-linejoin="round" stroke-linecap="round" fill="none"
+                            stroke-width="2" stroke="currentColor" height="20" width="20" viewBox="0 0 24 24">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                            <polyline points="14 2 14 8 20 8"></polyline>
+                            <line y2="13" x2="8" y1="13" x1="16"></line>
+                            <line y2="17" x2="8" y1="17" x1="16"></line>
+                            <polyline points="10 9 9 9 8 9"></polyline>
+                        </svg>Excel</div>
+                    <div class="download">
+                        <svg class="css-i6dzq1" stroke-linejoin="round" stroke-linecap="round" fill="none"
+                            stroke-width="2" stroke="currentColor" height="24" width="24" viewBox="0 0 24 24">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                            <polyline points="7 10 12 15 17 10"></polyline>
+                            <line y2="3" x2="12" y1="15" x1="12"></line>
+                        </svg>
+                    </div>
+                </button>
+                <div class="icons-BD">
+                    <i class="fa-solid fa-circle-plus" id="add_muestreo"></i>
+                </div>
+
+            </div>
+            <table class="table" id="table_muestreo">
+
+                <thead>
+                    <tr>
+                        <th>Pila</th>
+                        <th>Cantidad</th>
+                        <th>Fecha</th>
+                        <th>Peso</th>
+                        <th>Encargado</th>
+                        <th>Aprobación</th>
+                        <th>Acción</th>
+                    </tr>
+                </thead>
+                <div id="cloud_load" class="cloud_load"><span class="loader"></span></div>
+                <tbody id="Rmuestreo">
+
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+
+
+
+</section>
+<section class="formu-modal fventas" id="formu-modal">
+    <div class="form">
+        <div class="closeForm">
+            <i class="fas fa-times" id="closeModal"></i>
+        </div>
+
+        <h4>Añadir Venta</h4>
+        <form class="formulario" action="">
+            <div class="select">
+
+                <select id="encargado">
+                    <option disabled selected="">Encargado</option>
+                    <option value="Encargado 1">Juan</option>
+                    <option value="Encargado 2">Maria</option>
+                    <option value="Encargado 3">Pedro</option>
+                </select>
+            </div>
+            <div class="select pila">
+
+                <select id="menupila">
+                    <!--<option disabled selected="">Número Pila</option>
+                        <option value="Pila 1">1</option>
+                        <option value="Pila 2">2</option>
+                        <option value="Pila 3">3</option>
+                        <option value="Pila 4">4</option>
+                        <option value="Pila 5">5</option>
+                        <option value="Pila 6">6</option>
+                        <option value="Pila 7">7</option>
+                        <option value="Pila 8">8</option>
+                        <option value="Pila 9">9</option>
+                        <option value="Pila 10">10</option>
+                        <option value="Pila 11">11</option>
+                        <option value="Pila 12">12</option>
+                        <option value="Pila 13">13</option>
+                        <option value="Pila 14">14</option>
+                        <option value="Pila 15">15</option>
+                        <option value="Pila 16">16</option>
+                        <option value="Pila 17">17</option>
+                        <option value="Pila 18">18</option>-->
+                </select>
+            </div>
+            <div class="box">
+                <input id="peso" type="number" name="uname" required>
+                <label>Peso en KG</label>
+            </div>
+            <div class="box">
+                <input id="tilapia" type="number" name="uname" required>
+                <label>Tilapia</label>
+            </div>
+            <div class="box">
+                <input id="precio" type="number" name="uname" required>
+                <label>Precio</label>
+            </div>
+            <div class="box">
+                <input id="total" type="number" name="uname" required>
+                <label>Total</label>
+            </div>
+            <div class="box">
+                <input id="nomCliente" type="text" name="uname" required>
+                <label>Cliente</label>
+            </div>
+            <div class="box">
+                <input id="numero" type="text" name="uname" required>
+                <label>Número</label>
+            </div>
+            <div class="select">
+                <select id="pago" name="pago">
+                    <option disabled selected="">Tipo Pago</option>
+                    <option value="efectivo">Efectivo</option>
+                    <option value="sinpe">Sinpe</option>
+                    <option value="transferencia">Transferencia</option>
+                </select>
+            </div>
+            <button class="btnForm" type="button" id="btnAdd">AÑADIR</button>
+        </form>
+
+    </div>
+</section>
+
+<section class="formu-modal fconcentrado" id="formuconcentrado">
+    <div class="form">
+        <div class="closeForm">
+            <i class="fas fa-times" onclick="close_fconcentrado()"></i>
+        </div>
+
+        <h4>Añadir Concentado</h4>
+        <form class="formulario" action="">
+
+            <div class="box">
+                <input id="tipo" type="text" name="uname" required>
+                <label>Tipo</label>
+            </div>
+            <div class="box">
+                <input id="marca" type="text" name="uname" required>
+                <label>Marca</label>
+            </div>
+            <div class="box">
+                <input id="compra" type="date" name="uname" required>
+                <label>Fecha Compra</label>
+            </div>
+            <div class="box">
+                <input id="vencimiento" type="date" name="uname" required>
+                <label>Fecha Vencimiento</label>
+            </div>
+            <div class="box">
+                <input id="proveedor" type="text" name="uname" required>
+                <label>Proveedor</label>
+            </div>
+            <div class="box">
+                <input id="Cprecio" type="number" name="uname" required>
+                <label>Precio</label>
+            </div>
+            <div class="box">
+                <input id="sacos" type="number" name="uname" required>
+                <label>Cantidad de Sacos</label>
+            </div>
+            <div class="box">
+                <input id="proteina" type="text" name="uname" required>
+                <label>Proteína</label>
+            </div>
+
+            <button type="button" class="btnForm" onclick="addConcentrado(),clearFormData()">AÑADIR</button>
+        </form>
+
+    </div>
+</section>
+<section class="formu-modal fAlimentacion" id="formualimentacion">
+    <div class="form formuAlimentacion">
+        <div class="closeForm">
+            <i class="fas fa-times" id="closeModal_alimento"></i>
+        </div>
+
+        <h4>Añadir Alimentación</h4>
+        <form class="formulario" action="">
+            <div class="select pila">
+
+                <select id="menupila_alimentacion">
+
+                </select>
+            </div>
+            <div class="select tipo_concentrado">
+
+                <select id="select_tipConcentrado">
+
+                </select>
+            </div>
+            <div class="box">
+                <input id="totalDiario" type="number" name="uname" required>
+                <label>Total Diario</label>
+            </div>
+            <button type="button" class="btnForm" onclick="addAlimentacion(),clearFormData()"
+                style="cursor: pointer;">AÑADIR</button>
+        </form>
+
+    </div>
+</section>
+<section class="formu-modal fMortabilidad" id="formumortabilidad">
+    <div class="form formuMortabilidad">
+        <div class="closeForm">
+            <i class="fas fa-times" id="closeModal_mortabilidad"></i>
+        </div>
+
+        <h4>Añadir Mortabilidad</h4>
+        <form class="formulario" action="">
+            <div class="select pila">
+
+                <select id="menupila_mortabilidad">
+
+                </select>
+            </div>
+            <div class="box">
+                <input id="cantidad_mortabilidad" type="number" name="uname" required>
+                <label>Cantidad</label>
+            </div>
+            <div class="box">
+                <input id="observaciones_mortabilidad" type="text" name="uname" required>
+                <label>Observaciones</label>
+            </div>
+            <button type="button" class="btnForm" onclick="addMortabilidad(),clearFormData()">AÑADIR</button>
+        </form>
+
+    </div>
+</section>
+<section class="formu-modal fAlevines" id="formualevines" style="display: none;">
+    <div class="form formuAlevines">
+        <div class="closeForm">
+            <i class="fas fa-times" id="closeModal_alevines"></i>
+        </div>
+
+        <h4>Añadir Alevines</h4>
+        <form class="formulario" action="">
+
+            <div class="select pila">
+
+                <select id="Encargados_Alevines">
+                    <option disabled selected="">Provedor</option>
+                    <option>DosPinos</option>
+
+                </select>
+            </div>
+            <div class="box">
+                <input id="loteProvedor" type="text" name="uname" required>
+                <label>Lote Proveedor</label>
+            </div>
+            <div class="box">
+                <input id="pilaProvedor" type="number" name="uname" required>
+                <label>Pila Proveedor</label>
+            </div>
+            <div class="box">
+                <input id="loteAprotila" type="number" name="uname" required>
+                <label>Lote Aprotila</label>
+            </div>
+
+            <div class="select pila">
+
+                <select id="menupila_alevines">
+
+                </select>
+            </div>
+
+            <div class="box">
+                <input id="Especie" type="text" name="uname" required>
+                <label>Especie</label>
+            </div>
+            <div class="box">
+                <input id="cantidad_Alevines" type="number" name="uname" required>
+                <label>Cantidad Alevines</label>
+            </div>
+            <button id="btnAlevineAdd" type="button" class="btnForm" onclick="addAlevine()">AÑADIR</button>
+
+        </form>
+
+    </div>
+</section>
+
+<section class="formu-modal finveConcentrado" id="finveConcentrado" style="display: none;">
+    <div class="form formuinveConcentrado">
+        <div class="closeForm">
+            <i class="fas fa-times" id="closeModal_inveConcentrado"></i>
+        </div>
+
+        <h4>Añadir Inventario</h4>
+        <form class="formulario" action="">
+            <div class="box">
+                <input id="Tipo_Concentrado" type="text" name="uname" required>
+                <label>Tipo_Concentrado</label>
+            </div>
+            <div class="box">
+                <input id="CantidadConcentrados" type="number" name="uname" required>
+                <label>Cantidad Sacos</label>
+            </div>
+            <button type="button" class="btnForm" onclick="addInveConcentrado(),clearFormData()">AÑADIR</button>
+        </form>
+
+    </div>
+</section>
+<section class="formu-modal ftrazabilidad" id="ftrazabilidad" style="display: none;">
+    <div class="form formutrazabilidad">
+        <div class="closeForm">
+            <i class="fas fa-times" id="closeModal_trazabilidad"></i>
+        </div>
+
+        <h4>Añadir Trazabilidad</h4>
+        <form class="formulario" action="">
+            <div class="box">
+                <input id="lote_trazabilidad" type="number" name="uname" required>
+                <label>Lote</label>
+            </div>
+
+            <div class="select pila">
+
+                <select id="menupila_trazabilidadFinal">
+
+                </select>
+            </div>
+            <div class="box">
+                <input id="tipoPez_Trazabilidad" type="text" name="uname" required>
+                <label>Tipo Pez</label>
+            </div>
+            <div class="box">
+                <input id="Cantidad_trazabilidad" type="number" name="uname" required>
+                <label>Cantidad</label>
+            </div>
+            <button type="button" class="btnForm" onclick="addTrazabilidad()">AÑADIR</button>
+        </form>
+
+    </div>
+</section>
+<section class="formu-modal fmuestreo" id="fmuestreo" style="display: none;">
+    <div class="form formumuestreo">
+        <div class="closeForm">
+            <i class="fas fa-times" id="closeModal_muestreo"></i>
+        </div>
+
+        <h4>Añadir Muestreo</h4>
+        <form class="formulario" action="">
+            <div class="select pila">
+
+                <select id="menupila_muestreo">
+
+                </select>
+            </div>
+            <div class="box">
+                <input id="lote_muestreo" type="number" name="uname" required>
+                <label>Lote</label>
+            </div>
+            <div class="box">
+                <input id="cantidad_muestreo" type="number" name="uname" required>
+                <label>Cantidad</label>
+            </div>
+            <div class="box">
+                <input id="peso_muestreo" type="number" name="uname" required>
+                <label>Peso</label>
+            </div>
+
+            <div class="box">
+                <input id="observaciones_muestreo" type="text" name="uname" required>
+                <label>Observaciones</label>
+            </div>
+
+            <div class="select aprobacion">
+
+                <select id="aprobacion_muestreo">
+                    <option disabled selected="">Aprobacíon</option>
+                    <option>SÍ</option>
+                    <option>NO</option>
+                </select>
+            </div>
+
+            <button type="button" class="btnForm" onclick="addMuestreo(),clearFormData()">AÑADIR</button>
+        </form>
+
+    </div>
+</section>
+<div class="contenedor">
+
+
+    <div class="contenedor-toast" id="contenedor-toast">
+
+
+
+    </div>
+</div>
+<script src="https://momentjs.com/downloads/moment.js"></script>
+<script src="script.js"></script>
+<script src="excel.js"></script>
+<!-- Bootstrap-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+    crossorigin="anonymous"></script>
+<!-- jQuery -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<!-- DataTable -->
+<script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.12.1/js/dataTables.bootstrap5.min.js"></script>
+
+
+
+<!-- BOOTSTRAP -->
+
+
+
+<script>
+    $(document).ready(function () {
+        $('#table_venta').DataTable();
+    });
+    $(document).ready(function () {
+        $('#table_Mortabilidad').DataTable();
+    });
+    $(document).ready(function () {
+        $('#table_Pila').DataTable();
+    });
+    $(document).ready(function () {
+        $('#table_Alevines').DataTable();
+    });
+    $(document).ready(function () {
+        $('#table_trazabilidad').DataTable();
+    });
+    
+
+</script>
+
+</body>
+
+</html>

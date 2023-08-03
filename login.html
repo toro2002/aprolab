@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>login</title>
+  <link rel="stylesheet" href="css/login.css">
+</head>
+
+<body>
+
+  <div>
+
+    <div id="container">
+      <video class="video1" muted autoplay loop style="min-width: 100%;height: 948px;">
+        <source src="video/Video1.mp4" type="video/mp4">
+      </video>
+    </div>
+
+    <div class="contenedor">
+      
+      <div class="content">
+        <div class="img"><img src="img/logo.png" alt="" srcset=""></div>
+        
+        <div class="text">
+          INCIAR SESIÓN
+        </div>
+        <form action="#">
+          <div class="field">
+            <input required="" type="number" class="input" id="cedula">
+            <span class="span"><svg class="" xml:space="preserve" style="enable-background:new 0 0 512 512"
+                viewBox="0 0 512 512" y="0" x="0" height="20" width="50" xmlns:xlink="http://www.w3.org/1999/xlink"
+                version="1.1" xmlns="http://www.w3.org/2000/svg">
+                <g>
+                  <path class="" data-original="#000000" fill="#595959"
+                    d="M256 0c-74.439 0-135 60.561-135 135s60.561 135 135 135 135-60.561 135-135S330.439 0 256 0zM423.966 358.195C387.006 320.667 338.009 300 286 300h-60c-52.008 0-101.006 20.667-137.966 58.195C51.255 395.539 31 444.833 31 497c0 8.284 6.716 15 15 15h420c8.284 0 15-6.716 15-15 0-52.167-20.255-101.461-57.034-138.805z">
+                  </path>
+                </g>
+              </svg></span>
+            <label class="label">Cédula</label>
+          </div>
+          <div class="field">
+            <input required="" type="password" class="input" id="contraseña">
+            <span class="span"><svg class="" xml:space="preserve" style="enable-background:new 0 0 512 512"
+                viewBox="0 0 512 512" y="0" x="0" height="20" width="50" xmlns:xlink="http://www.w3.org/1999/xlink"
+                version="1.1" xmlns="http://www.w3.org/2000/svg">
+                <g>
+                  <path class="" data-original="#000000" fill="#595959"
+                    d="M336 192h-16v-64C320 57.406 262.594 0 192 0S64 57.406 64 128v64H48c-26.453 0-48 21.523-48 48v224c0 26.477 21.547 48 48 48h288c26.453 0 48-21.523 48-48V240c0-26.477-21.547-48-48-48zm-229.332-64c0-47.063 38.27-85.332 85.332-85.332s85.332 38.27 85.332 85.332v64H106.668zm0 0">
+                  </path>
+                </g>
+              </svg></span>
+            <label class="label">Password</label>
+            <button type="button" onclick="togglePasswordVisibility()" class="btnverpassword" id="togglePasswordButton">
+              <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-eye" width="44" height="44"
+                viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+                <path d="M21 12c-2.4 4 -5.4 6 -9 6c-3.6 0 -6.6 -2 -9 -6c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6" />
+              </svg>
+            </button>
+          </div>
+          <div class="forgot-pass">
+            <a href="#">Olvido su Contraseña?</a>
+          </div>
+          <button type="button"  onclick="validarlogin()" class="button">
+            Sign in
+          </button>
+          <!-- <div class="sign-up">
+            Not a member?
+            <a href="#">signup now</a>
+          </div> -->
+        </form>
+      </div>
+    </div>
+
+    <script>
+      function validar() {
+        var username = document.getElementById("username").value;
+        var password = document.getElementById("password").value;
+
+        if (username.length < 9) {
+            alert("La cedula debe ser mayor a 9 digitos");
+        } else if (password.length < 8) {
+            alert("La contraseña debe ser mayor a 8 digitos");
+        } else if (!/[A-Z]/.test(password) || !/[a-z]/.test(password)) {
+            alert("La contraseña debe contener al menos una letra mayúscula y una letra minúscula");
+        } else  {
+            window.location.href = "login.html";
+        }
+      }
+
+    </script>
+    
+    <script>
+      if (password.length < 8) {
+        alert("La contraseña debe tener al menos 8 caracteres.");
+        return false;
+      }
+      return true;
+  </script>
+  <script src="login.js"></script>
+</body>
+
+</html>

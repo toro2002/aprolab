@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+  <script src="https://kit.fontawesome.com/bf208e9523.js" crossorigin="anonymous"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
+
+  <title>APROTILA-INICIO</title>
+</head>
+
+<body>
+
+  <header>
+    <nav>
+      <a href="#"><img class="logo" id="logo" src="img/logo_white.png" alt="logo"></a>
+
+      <ul class="enlaces-menu">
+        <li class="enlace"><a href="#">Inicio</a></li>
+        <li class="enlace"><a href="#">Servicios</a></li>
+        <li class="enlace"><a href="#">Equipo</a></li>
+        <li class="enlace"><a href="#">Contacto</a></li>
+        <div class="car_shooping">
+          <i class="fa-solid fa-cart-shopping" data-btn-action="add-btn-cart" data-modal="#jsModalCarrito"></i>
+          <div class="count-products">
+            <span id="contador-productos">0</span>
+        </div>
+     
+        </div>
+      </ul>
+
+      <button class="ham" type="button">
+        <span class="br-1"></span>
+        <span class="br-2"></span>
+        <span class="br-3"></span>
+      </button>
+    </nav>
+  </header>
+  
+  <div class="mostrarModal">
+    <div class="modal" id="jsModalCarrito">
+      <div class="modal__container">
+        <button type="button" class="modal__close fa-solid fa-xmark jsModalClose "></button>
+
+        <div class="modal__info">
+          <div class="modal__header">
+            <h2><i class="fa-brands fa-opencart"></i>Carrito</h2>
+          </div>
+
+          <div class="modal__body">
+            <div class="modal__list">
+              <!-- <div class="modal__item">
+                
+                <div class="modal__thumb">
+                  <img src="img/naranja.jpg" alt="Naranja">
+                </div>
+                <div class="modal__text-product">
+                  <p>Naranja</p>
+                  <p><strong>$9.00 / kg</strong></p>
+                </div>
+              </div>
+
+
+              <div class="modal__item">
+                <div class="modal__thumb">
+                  <img src="img/manzana.jpg" alt="Naranja">
+                </div>
+                <div class="modal__text-product">
+                  <p>Manzana</p>
+                  <p><strong>$5.00 / kg</strong></p>
+                </div>
+              </div> -->
+
+            </div>
+          </div>
+
+          <div class="modal__footer">
+            <div class="modal__list-price">
+              <ul>
+                <li>Subtotal: <strong id="subtotal">$14.00</strong></li>
+                <li>Descuento: <strong>$0.00</strong></li>
+              </ul>
+              <h4 class="modal__total-cart"> Total: $14.00</h4>
+            </div>
+
+            <div class="modal__btns">
+              <a href="#" class="btn-border">Ir al carrito</a>
+              <a href="#" class="btn-primary">Comprar Ahora</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="videoPrincipal">
+    <video muted autoplay loop>
+      <source src="video/Video1.mp4" type="video/mp4">
+    </video>
+    <div class="aviso_productos">
+      <h2>PRODUCTOS</h2>
+      <a href="#productos"><i class="fa-solid fa-angle-down fa-bounce"></i></a>
+    </div>
+  </div>
+  <div class="container">
+    <div class="informacion">
+      <div class="titulo">
+        <h1>APROTILA</h1>
+      </div>
+      <div class="encabezado">
+        <p>En Aprotila, la calidad es nuestra máxima prioridad.
+          Desde la selección de los alevines hasta el proceso de alimentación y cuidado diario</p>
+      </div>
+      <div class="uiverse">
+        <span class="tooltip">Ver más</span>
+        <span>
+          PRODUCTOS
+        </span>
+      </div>
+      <div class="share">
+        <button class="btn1">
+          <svg fill-rule="nonzero" height="30px" width="30px" viewBox="0,0,256,256"
+            xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" class="instagram">
+            <g style="mix-blend-mode: normal" text-anchor="none" font-size="none" font-weight="none" font-family="none"
+              stroke-dashoffset="0" stroke-dasharray="" stroke-miterlimit="10" stroke-linejoin="miter"
+              stroke-linecap="butt" stroke-width="1" stroke="none" fill-rule="nonzero">
+              <g transform="scale(8,8)">
+                <path
+                  d="M11.46875,5c-3.55078,0 -6.46875,2.91406 -6.46875,6.46875v9.0625c0,3.55078 2.91406,6.46875 6.46875,6.46875h9.0625c3.55078,0 6.46875,-2.91406 6.46875,-6.46875v-9.0625c0,-3.55078 -2.91406,-6.46875 -6.46875,-6.46875zM11.46875,7h9.0625c2.47266,0 4.46875,1.99609 4.46875,4.46875v9.0625c0,2.47266 -1.99609,4.46875 -4.46875,4.46875h-9.0625c-2.47266,0 -4.46875,-1.99609 -4.46875,-4.46875v-9.0625c0,-2.47266 1.99609,-4.46875 4.46875,-4.46875zM21.90625,9.1875c-0.50391,0 -0.90625,0.40234 -0.90625,0.90625c0,0.50391 0.40234,0.90625 0.90625,0.90625c0.50391,0 0.90625,-0.40234 0.90625,-0.90625c0,-0.50391 -0.40234,-0.90625 -0.90625,-0.90625zM16,10c-3.30078,0 -6,2.69922 -6,6c0,3.30078 2.69922,6 6,6c3.30078,0 6,-2.69922 6,-6c0,-3.30078 -2.69922,-6 -6,-6zM16,12c2.22266,0 4,1.77734 4,4c0,2.22266 -1.77734,4 -4,4c-2.22266,0 -4,-1.77734 -4,-4c0,-2.22266 1.77734,-4 4,-4z">
+                </path>
+              </g>
+            </g>
+          </svg>
+          <span class="tooltiptext1">
+            <div class="card">
+              <svg fill="#000000" width="24px" viewBox="0 0 24 24" height="24px" xmlns="http://www.w3.org/2000/svg"
+                class="account">
+                <path fill="none" d="M0 0h24v24H0V0z"></path>
+                <path
+                  d="M12 5.9c1.16 0 2.1.94 2.1 2.1s-.94 2.1-2.1 2.1S9.9 9.16 9.9 8s.94-2.1 2.1-2.1m0 9c2.97 0 6.1 1.46 6.1 2.1v1.1H5.9V17c0-.64 3.13-2.1 6.1-2.1M12 4C9.79 4 8 5.79 8 8s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4zm0 9c-2.67 0-8 1.34-8 4v3h16v-3c0-2.66-5.33-4-8-4z">
+                </path>
+              </svg>
+            </div>
+            <div class="username">@APROTILA</div>
+          </span>
+        </button>
+        <button class="btn2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-whatsapp" width="24"
+            height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2bd46a" fill="none" stroke-linecap="round"
+            stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9" />
+            <path d="M9 10a.5 .5 0 0 0 1 0v-1a.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a.5 .5 0 0 0 0 -1h-1a.5 .5 0 0 0 0 1" />
+          </svg>
+          <span class="tooltiptext2">
+            <div class="card">
+              <svg fill="#000000" width="24px" viewBox="0 0 24 24" height="24px" xmlns="http://www.w3.org/2000/svg"
+                class="account">
+                <path fill="none" d="M0 0h24v24H0V0z"></path>
+                <path
+                  d="M12 5.9c1.16 0 2.1.94 2.1 2.1s-.94 2.1-2.1 2.1S9.9 9.16 9.9 8s.94-2.1 2.1-2.1m0 9c2.97 0 6.1 1.46 6.1 2.1v1.1H5.9V17c0-.64 3.13-2.1 6.1-2.1M12 4C9.79 4 8 5.79 8 8s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4zm0 9c-2.67 0-8 1.34-8 4v3h16v-3c0-2.66-5.33-4-8-4z">
+                </path>
+              </svg>
+            </div>
+            <div class="username">+506 8728-4070</div>
+          </span>
+        </button>
+        <button class="btn3">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-facebook" width="24"
+            height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#009988" fill="none" stroke-linecap="round"
+            stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3" />
+          </svg>
+          <span class="tooltiptext3">
+            <div class="card">
+              <svg fill="#000000" width="24px" viewBox="0 0 24 24" height="24px" xmlns="http://www.w3.org/2000/svg"
+                class="account">
+                <path fill="none" d="M0 0h24v24H0V0z"></path>
+                <path
+                  d="M12 5.9c1.16 0 2.1.94 2.1 2.1s-.94 2.1-2.1 2.1S9.9 9.16 9.9 8s.94-2.1 2.1-2.1m0 9c2.97 0 6.1 1.46 6.1 2.1v1.1H5.9V17c0-.64 3.13-2.1 6.1-2.1M12 4C9.79 4 8 5.79 8 8s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4zm0 9c-2.67 0-8 1.34-8 4v3h16v-3c0-2.66-5.33-4-8-4z">
+                </path>
+              </svg>
+            </div>
+            <div class="username">@APROTILA</div>
+          </span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <div class="container_productos" id="productos">
+      <div class="titulo_productos">
+        <h1 data-aos="fade-down">PRODUCTOS APROTILA</h1>
+      </div>
+      <div class="productos">
+        <div class="container_cards" data-aos="fade-down">
+          <div class="card_producto">
+            <article><img src="img/Pancitasdetilapia_900x.png" alt="" srcset="">
+              <img src="img/venta1.webp" alt="" srcset="">
+            </article>
+
+            <div class="informacion_producto">
+              <div class="nombre_producto">
+                <h1>Filet de Tilapia Premium <br>(Bolsa 650g)</h1>
+              </div>
+              <div class="precio_producto">
+                <h3>$3 c/u</h3>
+              </div>
+              <div class="anadirMas">
+                <i class="fa-solid fa-minus resta" id="restar"></i>
+                <input type="text" readonly id="cantidadProductos" value="1">
+                <i class="sumar fa-solid fa-plus" id="sumar"></i>
+              </div>
+
+              <div data-tooltip="Price:-$3" class="button" data-btn-action="add-btn-cart" data-modal="#jsModalCarrito">
+                <div class="button-wrapper">
+                  <div class="text">Buy Now</div>
+                  <span class="iconn">
+                    <svg viewBox="0 0 16 16" class="bi bi-cart2" fill="currentColor" height="16" width="16"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z">
+                      </path>
+                    </svg>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container_cards" data-aos="fade-down">
+          <div class="card_producto">
+            <article><img src="img/venta3.webp" alt="" srcset="">
+              <img src="img/venta2.webp" alt="" srcset="">
+            </article>
+
+            <div class="informacion_producto">
+              <div class="nombre_producto">
+                <h1>Tilapia Premium <br>(Bolsa 1000g)</h1>
+              </div>
+              <div class="precio_producto">
+                <h3>$3 c/u</h3>
+              </div>
+              <div class="anadirMas">
+                <i class="fa-solid fa-minus resta" id="restar"></i>
+                <input type="text" readonly id="cantidadProductos" value="1">
+                <i class="sumar fa-solid fa-plus" id="sumar"></i>
+              </div>
+              <div data-tooltip="Price:-$3" class="button" data-modal="#jsModalCarrito">
+                <div class="button-wrapper">
+                  <div class="text">Buy Now</div>
+                  <span class="iconn">
+                    <svg viewBox="0 0 16 16" class="bi bi-cart2" fill="currentColor" height="16" width="16"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z">
+                      </path>
+                    </svg>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container_cards" data-aos="fade-down">
+          <div class="card_producto">
+            <article><img src="img/venta4.jpg" alt="" srcset="">
+              <img src="img/venta5.png" alt="" srcset="">
+            </article>
+
+            <div class="informacion_producto">
+              <div class="nombre_producto">
+                <h1>Cabezas de Tilapia Premium <br>(Bolsa 500g)</h1>
+              </div>
+              <div class="precio_producto">
+                <h3>$3 c/u</h3>
+              </div>
+              <div class="anadirMas">
+                <i class="fa-solid fa-minus resta" id="restar"></i>
+                <input type="text" readonly id="cantidadProductos" value="1">
+                <i class="sumar fa-solid fa-plus" id="sumar"></i>
+              </div>
+              <div data-tooltip="Price:-$3" class="button">
+                <div class="button-wrapper">
+                  <div class="text">Buy Now</div>
+                  <span class="iconn">
+                    <svg viewBox="0 0 16 16" class="bi bi-cart2" fill="currentColor" height="16" width="16"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z">
+                      </path>
+                    </svg>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container_cards" data-aos="fade-down">
+          <div class="card_producto">
+            <article><img src="img/Pancitasdetilapia_900x.png" alt="" srcset="">
+              <img src="img/venta1.webp" alt="" srcset="">
+            </article>
+
+            <div class="informacion_producto">
+              <div class="nombre_producto">
+                <h1>Filet de Tilapia Premium <br>(Bolsa 650g)</h1>
+              </div>
+              <div class="precio_producto">
+                <h3>$3 c/u</h3>
+              </div>
+              <div class="anadirMas">
+                <i class="fa-solid fa-minus resta" id="restar"></i>
+                <input type="text" readonly id="cantidadProductos" value="1">
+                <i class="sumar fa-solid fa-plus" id="sumar"></i>
+              </div>
+              <div data-tooltip="Price:-$3" class="button">
+                <div class="button-wrapper">
+                  <div class="text">Buy Now</div>
+                  <span class="iconn">
+                    <svg viewBox="0 0 16 16" class="bi bi-cart2" fill="currentColor" height="16" width="16"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z">
+                      </path>
+                    </svg>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container_cards" data-aos="fade-down">
+          <div class="card_producto">
+            <article><img src="img/Pancitasdetilapia_900x.png" alt="" srcset="">
+              <img src="img/venta1.webp" alt="" srcset="">
+            </article>
+
+            <div class="informacion_producto">
+              <div class="nombre_producto">
+                <h1>Filet de Tilapia Premium <br>(Bolsa 650g)</h1>
+              </div>
+              <div class="precio_producto">
+                <h3>$3 c/u</h3>
+              </div>
+              <div class="anadirMas">
+                <i class="fa-solid fa-minus resta" id="restar"></i>
+                <input type="text" readonly id="cantidadProductos" value="1">
+                <i class="sumar fa-solid fa-plus" id="sumar"></i>
+              </div>
+              <div data-tooltip="Price:-$3" class="button">
+                <div class="button-wrapper">
+                  <div class="text">Buy Now</div>
+                  <span class="iconn">
+                    <svg viewBox="0 0 16 16" class="bi bi-cart2" fill="currentColor" height="16" width="16"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z">
+                      </path>
+                    </svg>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="c-button c-button--gooey"> VER MÁS
+        <div class="c-button__blobs">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </button>
+      <svg xmlns="http://www.w3.org/2000/svg" version="1.1" style="display: block; height: 0; width: 0;">
+        <defs>
+          <filter id="goo">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur"></feGaussianBlur>
+            <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo">
+            </feColorMatrix>
+            <feBlend in="SourceGraphic" in2="goo"></feBlend>
+          </filter>
+        </defs>
+      </svg>
+    </div>
+    <div class="products-preview">
+      <div class="preview" data-target="p-1">
+        <i class="fas fa-times"></i>
+        <img src="img/venta1.webp" alt="">
+        <h3>Filet de Pescado</h3>
+        <p>Montura para caballo 100% cuero, color café oscuro<br>
+          Materiales: Cuero, Hierro
+        </p>
+        <div class="price">$3 c/u</div>
+        <div class="anadirMas">
+          <i class="fa-solid fa-minus" id="restar"></i>
+          <input type="text" readonly id="cantidadProductos" value="1">
+          <i class="fa-solid fa-plus" id="sumar"></i>
+        </div>
+        <div class="price">$<span id="total">3</span></div>
+
+        <div class="buttons">
+          <a href="#" class="buy">Comprar Ahora</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="container_restaurante" id="soda">
+      <div class="titulo_restaurante" data-aos="fade-up">
+        <h1>SODA</h1>
+        <h3>Nuestro Menú</h3>
+      </div>
+
+      <div class="comidas">
+        <div class="cards_comidas" data-aos="fade-up">
+          <div class="book">
+            <img class="logo_comida" src="img/logo_white_sombra.png" alt="" srcset="">
+            <div class="menu_comida">
+              <h1>Ingredientes</h1>
+              <p>- Arroz</p>
+              <p>- Frijoles</p>
+              <p>- Ensalada</p>
+              <p>- Pollo</p>
+              <p>- Incluye un resfreco</p>
+              <p class="precio">PRECIO</p>
+              <h2 class="precio_comida">$10</h2>
+              <button class="Btn">
+                Pay
+                <svg class="svgIcon" viewBox="0 0 576 512">
+                  <path
+                    d="M512 80c8.8 0 16 7.2 16 16v32H48V96c0-8.8 7.2-16 16-16H512zm16 144V416c0 8.8-7.2 16-16 16H64c-8.8 0-16-7.2-16-16V224H528zM64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H512c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zm56 304c-13.3 0-24 10.7-24 24s10.7 24 24 24h48c13.3 0 24-10.7 24-24s-10.7-24-24-24H120zm128 0c-13.3 0-24 10.7-24 24s10.7 24 24 24H360c13.3 0 24-10.7 24-24s-10.7-24-24-24H248z">
+                  </path>
+                </svg>
+              </button>
+            </div>
+
+
+            <div class="cover">
+              <div class="informacion_comida">
+                <img src="img/casado-con-pechuga-de.jpg" alt="" srcset="">
+                <h1 class="nombre_comida">Casado de Pollo</h1>
+                <div class="starts"><i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+                <p>(5)</p>
+
+                <i class="fa-regular fa-eye"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="cards_comidas" data-aos="fade-up">
+          <div class="book">
+            <img class="logo_comida" src="img/logo_white_sombra.png" alt="" srcset="">
+            <div class="menu_comida">
+              <h1>Ingredientes</h1>
+              <p>- Arroz</p>
+              <p>- Frijoles</p>
+              <p>- Ensalada</p>
+              <p>- Pollo</p>
+              <p>- Incluye un resfreco</p>
+              <p class="precio">PRECIO</p>
+              <h2 class="precio_comida">$10</h2>
+              <button class="Btn">
+                Pay
+                <svg class="svgIcon" viewBox="0 0 576 512">
+                  <path
+                    d="M512 80c8.8 0 16 7.2 16 16v32H48V96c0-8.8 7.2-16 16-16H512zm16 144V416c0 8.8-7.2 16-16 16H64c-8.8 0-16-7.2-16-16V224H528zM64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H512c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zm56 304c-13.3 0-24 10.7-24 24s10.7 24 24 24h48c13.3 0 24-10.7 24-24s-10.7-24-24-24H120zm128 0c-13.3 0-24 10.7-24 24s10.7 24 24 24H360c13.3 0 24-10.7 24-24s-10.7-24-24-24H248z">
+                  </path>
+                </svg>
+              </button>
+            </div>
+
+
+            <div class="cover">
+              <div class="informacion_comida">
+                <img src="img/casado-con-pechuga-de.jpg" alt="" srcset="">
+                <h1 class="nombre_comida">Casado de Pollo</h1>
+                <div class="starts"><i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+                <p>(5)</p>
+
+                <i class="fa-regular fa-eye"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="cards_comidas" data-aos="fade-up">
+          <div class="book">
+            <img class="logo_comida" src="img/logo_white_sombra.png" alt="" srcset="">
+            <div class="menu_comida">
+              <h1>Ingredientes</h1>
+              <p>- Arroz</p>
+              <p>- Frijoles</p>
+              <p>- Ensalada</p>
+              <p>- Pollo</p>
+              <p>- Incluye un resfreco</p>
+              <p class="precio">PRECIO</p>
+              <h2 class="precio_comida">$10</h2>
+              <button class="Btn">
+                Pay
+                <svg class="svgIcon" viewBox="0 0 576 512">
+                  <path
+                    d="M512 80c8.8 0 16 7.2 16 16v32H48V96c0-8.8 7.2-16 16-16H512zm16 144V416c0 8.8-7.2 16-16 16H64c-8.8 0-16-7.2-16-16V224H528zM64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H512c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zm56 304c-13.3 0-24 10.7-24 24s10.7 24 24 24h48c13.3 0 24-10.7 24-24s-10.7-24-24-24H120zm128 0c-13.3 0-24 10.7-24 24s10.7 24 24 24H360c13.3 0 24-10.7 24-24s-10.7-24-24-24H248z">
+                  </path>
+                </svg>
+              </button>
+            </div>
+
+
+            <div class="cover">
+              <div class="informacion_comida">
+                <img src="img/casado-con-pechuga-de.jpg" alt="" srcset="">
+                <h1 class="nombre_comida">Casado de Pollo</h1>
+                <div class="starts"><i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+                <p>(5)</p>
+
+                <i class="fa-regular fa-eye"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="cards_comidas" data-aos="fade-up">
+          <div class="book">
+            <img class="logo_comida" src="img/logo_white_sombra.png" alt="" srcset="">
+            <div class="menu_comida">
+              <h1>Ingredientes</h1>
+              <p>- Arroz</p>
+              <p>- Frijoles</p>
+              <p>- Ensalada</p>
+              <p>- Pollo</p>
+              <p>- Incluye un resfreco</p>
+              <p class="precio">PRECIO</p>
+              <h2 class="precio_comida">$10</h2>
+              <button class="Btn">
+                Pay
+                <svg class="svgIcon" viewBox="0 0 576 512">
+                  <path
+                    d="M512 80c8.8 0 16 7.2 16 16v32H48V96c0-8.8 7.2-16 16-16H512zm16 144V416c0 8.8-7.2 16-16 16H64c-8.8 0-16-7.2-16-16V224H528zM64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H512c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zm56 304c-13.3 0-24 10.7-24 24s10.7 24 24 24h48c13.3 0 24-10.7 24-24s-10.7-24-24-24H120zm128 0c-13.3 0-24 10.7-24 24s10.7 24 24 24H360c13.3 0 24-10.7 24-24s-10.7-24-24-24H248z">
+                  </path>
+                </svg>
+              </button>
+            </div>
+
+
+            <div class="cover">
+              <div class="informacion_comida">
+                <img src="img/casado-con-pechuga-de.jpg" alt="" srcset="">
+                <h1 class="nombre_comida">Casado de Pollo</h1>
+                <div class="starts"><i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+                <p>(5)</p>
+
+                <i class="fa-regular fa-eye"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="quehacemos">
+      <div class="titulo_quehacemos" data-aos="fade-up">
+        <h1>¿Que hacemos?</h1>
+        <h3>Te mostramos</h3>
+      </div>
+      <section class="hero-section">
+
+        <div class="carda-container">
+          <div class="carda" data-aos="fade-up">
+            <div class="carda-background" style="background-image: url(img/quehacemos1.avif);">
+              <div class="content">
+                <div class="carda-category">Alimentación</div>
+                <h3 class="carda-heading">Alimentamos las Tilapias</h3>
+              </div>
+            </div>
+          </div>
+          <div class="carda" data-aos="fade-up">
+            <div class="carda-background" style="background-image: url(img/quehacemos2.jpg);">
+              <div class="content">
+                <div class="carda-category">Vendemos</div>
+                <h3 class="carda-heading">Productos 100% Calidad</h3>
+              </div>
+            </div>
+          </div>
+          <div class="carda" data-aos="fade-up">
+            <div class="carda-background"
+              style="background-image: url(https://media-cdn.tripadvisor.com/media/photo-s/14/3f/86/7c/20180820-130247-largejpg.jpg);">
+              <div class="content">
+                <div class="carda-category">Soda APROTILA</div>
+                <h3 class="carda-heading">Platillos Fuertes</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div class="container_valores">
+      <div class="titulo_valores" data-aos="fade-up">
+        <h1>Valores</h1>
+        <p>APROTILA tiene grandes valores que nos caracteriza</p>
+      </div>
+      <div class="informacion_valores">
+        <div class="box_valores" data-aos="fade-up"><i class="fa-solid fa-hand-holding-heart"></i>
+          <h3>Responsabilidad</h3>
+          <p>El precio de la grandeza es la responsabilidad</p>
+        </div>
+        <div class="box_valores" data-aos="fade-up"><i class="fa-solid fa-circle-check"></i>
+          <h3>Calidad</h3>
+          <p>Somos una empresa que trata de perfeccionarse<br> día a día</p>
+        </div>
+        <div class="box_valores" data-aos="fade-up"><i class="fa-solid fa-people-group"></i>
+          <h3>Trabajo en Equipo</h3>
+          <p>Ninguno de nosotros es tan bueno solo como todos nosotros juntos</p>
+        </div>
+      </div>
+    </div>
+
+
+
+  </main>
+  <footer>
+    <div class="waves">
+      <div class="wave" id="wave1"></div>
+      <div class="wave" id="wave2"></div>
+      <div class="wave" id="wave3"></div>
+      <div class="wave" id="wave4"></div>
+    </div>
+    <ul class="social_icon">
+      <li><a href=""><i class="fa-brands fa-instagram"></i></a></li>
+      <li><a href=""><i class="fa-brands fa-facebook"></i></a></li>
+      <li><a href=""><i class="fa-brands fa-whatsapp"></i></a></li>
+    </ul>
+  </footer>
+
+</body>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="index.js"></script>
+
+
+</html>
+
+
+<script>
+  AOS.init({
+    duration: 1100,
+    once: true
+  });//ESTE METODO ES PARA LAS ANIMACIONES
+  window.addEventListener("scroll", function () {
+    const nav = document.querySelector("nav");
+    var imagen = document.getElementById("logo");
+     imagen.src = "img/logo.png";
+    nav.classList.toggle("abajo", window.scrollY > 0);
+   if (window.scrollY <= 0) {
+       imagen.src = "img/logo_white.png";
+     }
+
+  });
+
+
+
+
+  const addToCart = document.querySelectorAll('[data-btn-action="add-btn-cart"]');
+
+  const closeModal = document.querySelector('.jsModalClose');
+
+  addToCart.forEach(btn => {
+
+    btn.addEventListener('click', (event) => {
+
+      const nameModal = event.target.getAttribute('data-modal');
+
+      const modal = document.querySelector(nameModal);
+
+      //abrimos el modal
+      modal.classList.add('active');
+      document.body.classList.add("modal-activo");
+    })
+
+  });
+
+  //CERRAR EL MODAL
+  closeModal.addEventListener('click', (event) => {
+    event.target.parentNode.parentNode.classList.remove('active');
+    document.body.classList.remove("modal-activo");
+  })
+
+  window.onclick = (event) => {
+    const modal = document.querySelector('.modal.active');
+
+    if (event.target == modal) {
+      modal.classList.remove('active');
+      document.body.classList.remove("modal-activo");
+    }
+  }
+
+
+
+</script>
